@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BooksApp</title>
+    <title><%= t :application_name %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,10 @@
   </head>
 
   <body>
+    <p>
+      <%= link_to_if params[:locale] != 'ja', '日本語', url_for(controller: controller.controller_name, action: action_name, locale: 'ja') %> |
+      <%= link_to_if params[:locale] != 'en', 'English', url_for(controller: controller.controller_name, action: action_name, locale: 'en')  %>
+    </p>
     <%= yield %>
   </body>
 </html>
