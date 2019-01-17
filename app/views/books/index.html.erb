@@ -28,6 +28,10 @@
   </tbody>
 </table>
 
+<div>
+  <%= paginate @books %>
+</div>
+
 <br>
 
 <%= link_to t(:'helpers.action.book.new'), new_book_path %>
