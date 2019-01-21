@@ -36,7 +36,3 @@ en:
   errors:
     messages:
       error_count: '%{count} prohibited this book from being saved'
-
-
-
-

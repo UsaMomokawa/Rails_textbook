@@ -37,7 +37,3 @@ ja:
     messages:
       blank: を入力してください
       error_count: '入力箇所に%{number}件のエラーが発生しました'
-
-
-
-
