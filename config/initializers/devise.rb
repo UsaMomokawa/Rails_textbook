@@ -287,4 +287,13 @@ Devise.setup do |config|
   # ActiveSupport.on_load(:devise_failure_app) do
   #   include Turbolinks::Controller
   # end
+
+  # API key
+  config.omniauth :facebook, ENV['FB_APP_ID'], ENV['FB_APP_SECRET'],
+                scope: 'public_profile,email',
+                info_fields: 'email,name,picture',
+                client_options: {
+                    site: 'https://graph.facebook.com/v2.11',
+                    authorize_url: "https://www.facebook.com/v2.11/dialog/oauth"
+                }
 end

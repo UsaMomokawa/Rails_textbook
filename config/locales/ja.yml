@@ -8,7 +8,7 @@ ja:
         author: 著者
         picture: 画像
       user:
-        username: ユーザー名
+        name: ユーザー名
     models:
       book: 図書
   helpers:
@@ -30,6 +30,9 @@ ja:
         destroy: 削除
       user:
         log_out: ログアウト
+    errors:
+      messages:
+        record_invalid: バリデーションでエラーが発生しました。
   flash:
     book:
       created: 新しく本が登録されました!

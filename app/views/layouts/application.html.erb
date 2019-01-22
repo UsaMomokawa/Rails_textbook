@@ -18,7 +18,7 @@
 
       <nav>
         <% if user_signed_in? %>
-          <strong><%= t(:'activerecord.attributes.user.username')%>: <%= current_user.username %></strong>
+          <strong><%= current_user.name %></strong>
           <%= link_to t(:'helpers.action.user.edit'), edit_user_registration_path %> |
           <%= link_to t(:'helpers.submit.user.log_out'), destroy_user_session_path, method: :delete %>
         <% else %>
