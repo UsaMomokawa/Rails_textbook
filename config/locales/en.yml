@@ -1,0 +1,48 @@
+en:
+  application_name: Books App
+  activerecord:
+    attributes:
+      book:
+        title: Title
+        memo: Memo
+        author: Author
+        picture: Picture
+      user:
+        username: Username
+    models:
+      book:
+        one: Book
+        other: Books
+    errors:
+      messages:
+        record_invalid: "Validation failed: %{errors}"
+        restrict_dependent_destroy:
+          has_one: "Cannot delete record because a dependent %{record} exists"
+          has_many: "Cannot delete record because dependent %{record} exist"
+  helpers:
+    action:
+      book:
+        index: Listing Books
+        new: New Book
+        show: Show
+        edit: Edit
+        back: Back
+      user:
+        log_in: Log in
+        sign_up: Sign Up
+        edit: Edit
+    submit:
+      book:
+        create: Create Book
+        update: Update Book
+        destroy: Destroy
+      user:
+        log_out: Log Out
+  flash:
+    book:
+      created: Book was successfully created.
+      updated: Book was successfully updated.
+      destroyed: Book was successfully destroyed.
+  confirmations:
+    book:
+      destroy: Are you sure?

@@ -1,5 +1,16 @@
 ja:
   application_name: 図書一覧
+  activerecord:
+    attributes:
+      book:
+        title: タイトル
+        memo: メモ
+        author: 著者
+        picture: 画像
+      user:
+        username: ユーザー名
+    models:
+      book: 図書
   helpers:
     action:
       book:
@@ -8,11 +19,17 @@ ja:
         show: 詳細
         edit: 編集
         back: 戻る
+      user:
+        log_in: ログイン
+        sign_up: アカウント登録
+        edit: 編集
     submit:
       book:
         create: 登録
         update: 更新
         destroy: 削除
+      user:
+        log_out: ログアウト
   flash:
     book:
       created: 新しく本が登録されました!
@@ -21,3 +38,6 @@ ja:
   confirmations:
     book:
       destroy: 削除してよろしいですか?
+  errors:
+    messages:
+      blank: を入力してください
