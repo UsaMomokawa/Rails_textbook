@@ -10,10 +10,27 @@
   </head>
 
   <body>
-    <p>
-      <%= link_to_if params[:locale] != 'ja', '日本語', url_for(controller: controller.controller_name, action: action_name, locale: 'ja') %> |
-      <%= link_to_if params[:locale] != 'en', 'English', url_for(controller: controller.controller_name, action: action_name, locale: 'en')  %>
-    </p>
+    <header>
+      <p>
+        <%= link_to_if params[:locale] != 'ja', '日本語', url_for(controller: controller.controller_name, action: action_name, locale: 'ja') %> |
+        <%= link_to_if params[:locale] != 'en', 'English', url_for(controller: controller.controller_name, action: action_name, locale: 'en')  %>
+      </p>
+
+      <nav>
+        <% if user_signed_in? %>
+          <strong><%= t(:'activerecord.attributes.user.username')%>: <%= current_user.username %></strong>
+          <%= link_to t(:'helpers.action.user.edit'), edit_user_registration_path %> |
+          <%= link_to t(:'helpers.submit.user.log_out'), destroy_user_session_path, method: :delete %>
+        <% else %>
+          <%= link_to t(:'helpers.action.user.sign_up'), new_user_registration_path %> |
+          <%= link_to t(:'helpers.action.user.log_in'), new_user_session_path %> 
+        <% end %>
+      </nav>
+    </header>
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
     <%= yield %>
   </body>
 </html>

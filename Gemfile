@@ -65,3 +65,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'carrierwave'
 # Pagination
 gem 'kaminari'
+# Authentication
+gem 'devise'
+# Add i18n support of devise for views
+gem 'devise-i18n'
