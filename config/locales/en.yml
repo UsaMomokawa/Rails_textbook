@@ -8,7 +8,7 @@ en:
         author: Author
         picture: Picture
       user:
-        username: Username
+        name: Username
     models:
       book:
         one: Book

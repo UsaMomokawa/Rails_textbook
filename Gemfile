@@ -61,11 +61,10 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-# Upload pictures
 gem 'carrierwave'
-# Pagination
 gem 'kaminari'
-# Authentication
 gem 'devise'
-# Add i18n support of devise for views
 gem 'devise-i18n'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'dotenv-rails'
