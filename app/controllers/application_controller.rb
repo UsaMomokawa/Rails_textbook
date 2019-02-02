@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
 
   # Add Strong parameters
   def configure_permitted_parameters
-    added_attrs = [:name, :email, :password, :password_confirmation, :picture]
+    added_attrs = [:name, :email, :password, :password_confirmation, :avatar]
     devise_parameter_sanitizer.permit :sign_up, keys: added_attrs
     devise_parameter_sanitizer.permit :account_update, keys: added_attrs
   end

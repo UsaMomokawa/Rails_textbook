@@ -19,6 +19,11 @@
       <nav>
         <% if user_signed_in? %>
           <strong><%= current_user.name %></strong>
+          <% if current_user.avatar.attached? %>
+            <%= image_tag current_user.avatar.variant(resize: '100x100') %>
+          <% else %>
+            <%= image_tag('user_sample.png', size: '100x100') %>
+          <% end %>
           <%= link_to t(:'helpers.action.user.edit'), edit_user_registration_path %> |
           <%= link_to t(:'helpers.submit.user.log_out'), destroy_user_session_path, method: :delete %>
         <% else %>

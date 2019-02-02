@@ -291,7 +291,7 @@ Devise.setup do |config|
   # API key
   config.omniauth :facebook, ENV['FB_APP_ID'], ENV['FB_APP_SECRET'],
                 scope: 'public_profile,email',
-                info_fields: 'email,name,picture',
+                info_fields: 'email,name',
                 client_options: {
                     site: 'https://graph.facebook.com/v2.11',
                     authorize_url: "https://www.facebook.com/v2.11/dialog/oauth"

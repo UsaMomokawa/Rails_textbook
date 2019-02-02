@@ -9,6 +9,7 @@ ja:
         picture: 画像
       user:
         name: ユーザー名
+        avatar: ユーザー画像
     models:
       book: 図書
   helpers:

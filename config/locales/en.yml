@@ -9,6 +9,7 @@ en:
         picture: Picture
       user:
         name: Username
+        avatar: Avatar picture
     models:
       book:
         one: Book
