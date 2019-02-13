@@ -26,9 +26,6 @@
           <% end %>
           <%= link_to t(:'helpers.action.user.edit'), edit_user_registration_path %> |
           <%= link_to t(:'helpers.submit.user.log_out'), destroy_user_session_path, method: :delete %>
-        <% else %>
-          <%= link_to t(:'helpers.action.user.sign_up'), new_user_registration_path %> |
-          <%= link_to t(:'helpers.action.user.log_in'), new_user_session_path %> 
         <% end %>
       </nav>
     </header>
