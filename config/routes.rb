@@ -8,8 +8,6 @@ Rails.application.routes.draw do
   scope "(:locale)" do
     root 'books#index'
     resources :books
-    devise_for :users, skip: :omniauth_callbacks, controllers: {
-      registrations: 'users/registrations'
-    }
+    devise_for :users, skip: :omniauth_callbacks
   end
 end
