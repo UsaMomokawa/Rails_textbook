@@ -9,8 +9,8 @@ class ApplicationController < ActionController::Base
   end
 
   # Override default_url_options
-  def default_url_options(options = {})
-    { locale: I18n.locale }.merge options
+  def default_url_options
+    { locale: I18n.locale }
   end
 
   protected
@@ -20,5 +20,16 @@ class ApplicationController < ActionController::Base
     added_attrs = [:name, :email, :password, :password_confirmation, :avatar]
     devise_parameter_sanitizer.permit :sign_up, keys: added_attrs
     devise_parameter_sanitizer.permit :account_update, keys: added_attrs
+  end
+
+  private
+
+  # Overwriting the sign_out redirect path method
+  def after_sign_out_path_for(resource_or_scope)
+    if resource_or_scope == :user
+      new_user_session_path
+    else
+      root_path
+    end
   end
 end
