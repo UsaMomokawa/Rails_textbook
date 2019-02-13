@@ -29,8 +29,6 @@ en:
         edit: Edit
         back: Back
       user:
-        log_in: Log in
-        sign_up: Sign Up
         edit: Edit
     submit:
       book:
