@@ -43,3 +43,4 @@ ja:
   errors:
     messages:
       blank: を入力してください
+      taken: 既に使用されています

@@ -10,6 +10,9 @@ Rails.application.routes.draw do
     get '/locale', to: 'books#index'
     resources :books
     devise_for :users,
-    skip: :omniauth_callbacks
+    skip: :omniauth_callbacks,
+    controllers: {
+      registrations: 'users/registrations'
+    }
   end
 end
