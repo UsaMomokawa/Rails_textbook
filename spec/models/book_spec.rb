@@ -1,11 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe Book, type: :model do
-  # 有効なファクトリを持つこと
-  it 'has a valid factory' do
-    expect(FactoryBot.build(:book)).to be_valid
-  end
-
   # タイトル、著者名があれば有効であること
   it 'is valid with a title and an author name' do
     book = Book.new(
