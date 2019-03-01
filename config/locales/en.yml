@@ -45,3 +45,7 @@ en:
   confirmations:
     book:
       destroy: Are you sure?
+  errors:
+    messages:
+      blank: can't be blank.
+      taken: has already been taken.

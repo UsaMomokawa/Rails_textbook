@@ -41,7 +41,6 @@ RSpec.feature "Users", type: :feature do
     fill_in I18n.t(:'activerecord.attributes.user.password'), with: "foofootest"
     fill_in I18n.t(:'activerecord.attributes.user.password_confirmation'), with: "foofootest"
     attach_file I18n.t(:'activerecord.attributes.user.avatar'), "#{Rails.root}/spec/factories/test_anotheravatar.png"
-    fill_in I18n.t(:'activerecord.attributes.user.current_password'), with: user.password
     click_button I18n.t(:'devise.registrations.edit.update')
 
     expect(page).to have_content I18n.t(:'devise.registrations.updated')
@@ -72,6 +71,5 @@ RSpec.feature "Users", type: :feature do
       page.accept_confirm
       expect(page).to have_content I18n.t(:'devise.registrations.destroyed')
     }.to change(User, :count).by(-1)
-
   end
 end
