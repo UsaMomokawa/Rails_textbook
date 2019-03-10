@@ -40,5 +40,4 @@ vendor/bundle
 # Ignore other unneeded files.
 Gemfile.lock
 .ruby_version
-config/database.yml
 .env
