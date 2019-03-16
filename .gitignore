@@ -41,3 +41,5 @@ vendor/bundle
 Gemfile.lock
 .ruby_version
 .env
+/node_modules
+yarn.lock
